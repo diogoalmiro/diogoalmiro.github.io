@@ -34,7 +34,7 @@ jobs:
       - name: Set up node
         uses: actions/setup-node@v6
       - name: Install pug
-        uses: npm install -g pug-cli
+        run: npm install -g pug-cli
       - name: Create www files
 		run: |
           mkdir wwww
