@@ -1,0 +1,349 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css");
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 21cm;
+    font: 11px / 1.4 'Open Sans', sans-serif;
+    margin: 0.5cm auto;
+    padding: 0 1.5cm;
+    color: #333333;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.3cm;
+    justify-content: space-around;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+}
+
+#profile-image img {
+    border-radius: 50%;
+}
+
+#about-me, #contact-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+#about-me span, #contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.3cm;
+    font-size: 14px;
+}
+
+#about-me i, #contact-info i {
+    width: 12px;
+    color: #0066cc;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+article {
+    page-break-inside: avoid;
+}
+
+article h3 {
+    color: #0066cc;
+    border-bottom: 1px solid #0066cc;
+    padding-bottom: 0.1cm;
+    margin-bottom: 0.3cm;
+    font-size: 14px;
+    margin-left: 0;
+}
+
+article h3 i {
+    margin-right: 0.3cm;
+}
+
+article section ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.experience-item, .education-item, .project-item, .formation-item {
+    margin-bottom: 0.15cm;
+    padding-bottom: 0.1cm;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.experience-item:last-child, .education-item:last-child, .project-item:last-child, .formation-item:last-child {
+    border-bottom: none;
+}
+
+.experience-item h4, .education-item h4, .project-item h4, .formation-item h4 {
+    margin: 0 0 0.05cm 0;
+    font-size: 12px;
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.experience-item h4::after, .education-item h4::after, .project-item h4::after, .formation-item h4::after {
+    content: attr(data-timespan);
+    font-weight: normal;
+    color: #666666;
+}
+
+.company-info, .education-info {
+    display: none;
+}
+
+.company-info h5, .education-info h5 {
+    margin: 0;
+    font-size: 10px;
+    color: #666666;
+    font-weight: normal;
+}
+
+.experience-item p, .education-item p, .project-item p {
+    margin: 0.1cm 0;
+    font-size: 10px;
+    line-height: 1.3;
+    margin-left: 0;
+}
+
+.education-item p:first-of-type {
+    font-style: italic;
+    color: #666666;
+    margin: 0.1cm 0 0.1cm 0;
+}
+
+.education-item p:nth-of-type(2) {
+    font-weight: normal;
+    color: #333333;
+    margin: 0.1cm 0 0.2cm 0;
+    font-style: normal;
+}
+
+.education-item p.single {
+    font-style: normal;
+    color: #333333;
+    font-weight: normal;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.1cm 0 0 0;
+}
+
+.technologies li {
+    background: #f8f9fa;
+    color: #666666;
+    padding: 0;
+    border-radius: 2px;
+    margin: 0 0.1cm 0 0;
+    padding: 0.03cm;
+    font-size: 9px;
+    border: 1px solid #e0e0e0;
+}
+
+.skills-category {
+    margin-bottom: 0.5cm;
+}
+
+.skills-category h4 {
+    margin: 0 0 0.3cm 0;
+    font-size: 11px;
+    color: #0066cc;
+}
+
+.skills-category ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2cm;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-category ul li {
+    background: #f8f9fa;
+    color: #666666;
+    padding: 0.1cm 0.3cm;
+    border-radius: 2px;
+    font-size: 9px;
+    border: 1px solid #e0e0e0;
+}
+
+.distinction-item {
+    margin-bottom: 0.5cm;
+    padding-bottom: 0.3cm;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.distinction-item:last-child {
+    border-bottom: none;
+}
+
+.distinction-item h4 {
+    margin: 0 0 0.1cm 0;
+    font-size: 12px;
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.distinction-item h4::after {
+    content: attr(data-timespan);
+    font-weight: normal;
+    color: #666666;
+}
+
+.distinction-item p {
+    margin: 0.2cm 0;
+    font-size: 10px;
+    line-height: 1.3;
+    margin-left: 0;
+}
+
+#highlights {
+    text-align: center;
+    margin-bottom: 0cm;
+    padding: 0.2cm;
+}
+
+#highlights h3 {
+    border: none;
+    margin: 0;
+    font-size: 14px;
+    color: #000000;
+}
+
+#highlights span {
+    font-size: 12px;
+    color: #000000;
+}
+
+#skills-technologies {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.skills-technologies-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.1cm;
+    margin-left: 0;
+}
+
+.skills-technologies-item h4 {
+    color: #0066cc;
+    min-width: 2cm;
+    margin: 0;
+    display: flex;
+    gap: 0.2cm;
+    margin-right: auto;
+}
+
+.skills-technologies-item h4 i {
+    font-size: 12px;
+    color: #0066cc;
+}
+
+.skills-technologies-item p {
+    margin: 0;
+}
+
+
+footer {
+    text-align: right;
+}
+
+#modal-anchor {
+    display: block;
+}
+#pdf-anchor {
+    display: none;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 1cm;
+    }
+    
+    .page-break {
+        page-break-before: always;
+    }
+
+    #modal-anchor {
+        display: none;
+    }
+    #pdf-anchor {
+        display: block;
+    }
+}
+
+dialog {
+    display: none;
+    position: fixed;
+    top: 2cm;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 23cm;
+    height: calc(100vh - 4cm);
+    max-height: calc(100vh - 4cm);
+    overflow-y: auto;
+    background-color: #f8f9fa55;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 0.2cm;
+    z-index: 1000;
+    backdrop-filter: blur(50px);
+}
+
+/* Prevent background scrolling when dialog is open */
+body.dialog-open {
+    overflow: hidden;
+    height: 100vh;
+}
+
+dialog main {
+    font-size: 13px;
+}
+
+.close-modal {
+    position: sticky;
+    top: 0.5cm;
+    right: 0.5cm;
+    float: right;
+    font-size: 16px;
+    color: #0066cc;
+    cursor: pointer;
+    z-index: 1001;
+    background-color: rgba(248, 249, 250, 0.9);
+    padding: 0.2cm;
+    border-radius: 50%;
+    width: 1cm;
+    height: 1cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5cm;
+}

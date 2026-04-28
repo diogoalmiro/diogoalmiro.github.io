@@ -1,1 +1,256 @@
-b Hello
+-
+  let today = new Date();
+  function getDateStr() {
+    let formater = new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric' })
+    return formater.format(today).replace(' ', ', ')
+  }
+  let dateStr = getDateStr()
+
+html 
+    head 
+        title CV Diogo Almiro - #{dateStr}
+        meta(charset="utf-8")
+        style
+          include style.css
+    body
+        header
+            div#profile-image
+                img(src="https://cv.diogoalmiro.com/data/profile.jpg", alt="Profile" width="100")
+            div#about-me
+                span
+                    i.fa.fa-user(alt="Name")
+                    | &nbsp;Diogo Almiro
+                span
+                    i.fa.fa-briefcase(alt="Company")
+                    | &nbsp;Software Engineer, Broadvoice
+                span
+                    i.fa.fa-language(alt="Languages")
+                    | &nbsp;Portuguese, English
+                span 
+                    i.fa.fa-map-marker-alt(alt="Location")
+                    | &nbsp;Lisbon, Portugal
+                span
+                    i.fa.fa-birthday-cake(alt="Birthday")
+                    | &nbsp;1997-06-06
+            div#contact-info
+                span
+                    i.fa.fa-envelope(alt="Email")
+                    a#mail
+                        i.fa.fa-spinner.fa-spin
+                span
+                    i.fab.fa-linkedin(alt="LinkedIn")
+                    a(href="https://www.linkedin.com/in/diogo-almiro/") linkedin.com/in/diogo-almiro
+                span
+                    i.fab.fa-github(alt="GitHub")
+                    a(href="https://github.com/diogoalmiro") github.com/diogoalmiro
+                span
+                    i.fa.fa-globe(alt="Website")
+                    a(href="https://cv.diogoalmiro.com") cv.diogoalmiro.com
+                span
+                    i.fa.fa-ellipsis-h(alt="More about me")
+                    a#pdf-anchor(href="https://cv.diogoalmiro.com/#extended-cv-modal") More about me
+                    a#modal-anchor(href="#extended-cv-modal") More about me
+        main
+            article#highlights(style="text-align: center; border: none;")
+                h3(style="border: none;")
+                    i.fa.fa-star(alt="Highlights")
+                    span I Am a Software Engineer with a passion for full-stack web development.
+            
+            article#skills-technologies
+                section.skills-technologies-item
+                    h4
+                        i.fa.fa-users(alt="Soft Skills")
+                        | Soft Skills
+                    p Problem-solving, Integration, Teamwork, Adaptation, Planning, Communication, Organization, Leadership
+                section.skills-technologies-item
+                    h4
+                        i.fa.fa-bug(alt="Backend")
+                        | Backend
+                    p Node.js, TypeScript, NestJS, TypeORM, PHP, Python, Ruby, C#, Java, C/C++
+                section.skills-technologies-item
+                    h4
+                        i.fa.fa-desktop(alt="Frontend")
+                        | Frontend
+                    p JavaScript, Next.js, React.js, HTML, CSS, Bootstrap
+                section.skills-technologies-item
+                    h4
+                        i.fa.fa-database(alt="Database")
+                        | Database
+                    p PostgreSQL, MySQL, Redis, Elasticsearch
+                section.skills-technologies-item
+                    h4
+                        i.fa.fa-terminal(alt="Tools")
+                        | Tools
+                    p Kafka, Docker, Kubernetes, NGINX, REST APIs, Git, SSH, Unix shell
+
+            article#experience
+                h3 
+                    i.fa.fa-user-tie(alt="Experience")
+                    | &nbsp;Experience
+                
+                section.experience-item
+                    h4(data-timespan="September 2023 - Present") Software Engineer, Broadvoice
+                    ul
+                        li Mantainmence of GoContact (CCaaS) platform.
+                        li Build and maintain Data Studio (a data unification platform) combining events from GoContact and Bhive (UCaaS) to power Brightmetrics reporting and analytics.
+                        li Participation in architecture evolution and feature development for Data Studio.
+                        li Recovery of large volumes of event data after a production incident, ensuring data accuracy for reporting.
+                        li Major migration introduced to improve performance and scalability by partitioning the database.
+                        li Collaboration with DevOps team to streamline deployment and release processes, improving delivery efficiency.
+                    ul.technologies
+                        li NestJS
+                        li TypeScript
+                        li TypeORM
+                        li Node.js
+                        li PostgreSQL
+                        li Docker
+                        li Kubernetes
+                        li Kafka
+                        li REST APIs
+                        li Ruby on Rails
+                        li PHP
+                        li jQuery
+                        li MySQL
+                        li Redis
+
+                section.experience-item
+                    h4(data-timespan="January 2022 - September 2023") Software Engineer, INESC-ID
+                    ul
+                        li Implementation of a new software infrastructure for publishing rulings for the Portuguese Supreme Court of Justice.
+                        li Importation and treatment from different legacy systems to the new infrastructure.
+                        li Implementation of a new semi automated application to redact personal information from legal documents, integrating Artificial Intelligence models created by INESC-ID.
+                        li Management and deployment this and other applications a Cloud enviroment using Docker and Proxmox.
+                    ul.technologies
+                        li Next.js
+                        li React.js
+                        li Node.js
+                        li Docker
+                        li Proxmox
+                        li Flask
+                        li spaCy
+                        li Elasticsearch
+                        li Redis
+
+                section.experience-item
+                    h4(data-timespan="May 2022 - March 2023") Software Engineer, Trigyn Technologies
+                    ul
+                        li Creation of a Windows Forms UI application for bulk OCR processing for the United Nations Archives and Records Management Section.
+                    ul.technologies
+                        li C#
+                        li .NET
+                        li Windows Forms
+                        li Tesseract
+                        li OCR
+                        li OpenCV
+
+                section.experience-item
+                    h4(data-timespan="January - March 2022") Software Developer, INESC-ID
+                    ul
+                        li Polish and finish the implementation of a database and website to store and display and search trade unions information.
+                    ul.technologies
+                        li Pandas
+                        li Flask
+                        li Bootstrap
+                        li SQL
+                        li Python
+
+                section.experience-item
+                    h4(data-timespan="January - December 2021") Software Developer, INESC-ID
+                    p Research and implementation of tools to modernize administrative environments for my master's dissertation.
+                    ul.technologies
+                        li Express.js
+                        li Node.js
+                        li HTML
+                        li CSS
+
+                section.experience-item
+                    h4(data-timespan="September - December 2020") Data Scientist, INESC-ID
+                    p Analysis of access logs from the Diário da República Eletrónico website.
+                    ul.technologies
+                        li SQL
+                        li Data Analysis
+                        li Node.js
+
+                section.experience-item
+                    h4(data-timespan="June - August 2019") Software Developer Intern, t_insight
+                    p Web page development for the Portuguese Basketball Federation's new website using WordPress.
+                    ul.technologies
+                        li WordPress
+                        li HTML
+                        li CSS
+                        li jQuery
+                        li PHP
+
+                section.experience-item
+                    h4(data-timespan="July - August 2018") Software Developer Intern, Talkdesk
+                    p Participation in a hackathon and development a product for Talkdesk's Marketplace.
+                    ul.technologies
+                        li Redis
+                        li Java Spring
+                        li Heroku
+                        li HTML
+                        li CSS
+
+            article#education
+                h3 
+                    i.fa.fa-graduation-cap(alt="Education")
+                    | &nbsp;Education
+                
+                section.education-item
+                    h4(data-timespan="September 2018 - November 2021") Information Systems and Computer Engineering
+                    p Instituto Superior Técnico, Universidade de Lisboa
+                    p Bologna Master's Degree - Grade: 15
+
+                section.education-item
+                    h4(data-timespan="September 2019 - January 2020") Erasmus Study Programme
+                    p Faculty of Engineering Science, Katholieke Universiteit Leuven
+
+                section.education-item
+                    h4(data-timespan="November 2019") OLS - Language Assessment in English
+                    p.single Level C1
+
+                section.education-item
+                    h4(data-timespan="September 2015 - July 2018") Information Systems Engineering
+                    p Faculdade de Ciências, Universidade de Lisboa
+                    p Bologna Bachelor's Degree - Grade: 16
+
+                section.education-item
+                    h4(data-timespan="September 2015") First Certificate in English
+                    p.single Level B2
+
+                section.education-item
+                    h4(data-timespan="2015") Scientific-Humanistic Course of Science and Technology
+                    p Escola Secundária Rainha Dona Leonor
+                    p Grade: 16
+
+            article#distinctions
+                h3 
+                    i.fa.fa-trophy(alt="Distinctions")
+                    | &nbsp;Distinctions
+                
+                section.distinction-item
+                    h4(data-timespan="August 2018") Shark Tank 1st place
+                    p Internal competition - Talkdesk
+
+                section.distinction-item
+                    h4(data-timespan="2017") Academic Excellence Diploma 2nd year
+                    p Faculdade de Ciências, Universidade de Lisboa
+
+                section.distinction-item
+                    h4(data-timespan="2016") Academic Excellence Diploma 1st year
+                    p Faculdade de Ciências, Universidade de Lisboa
+
+                section.distinction-item
+                    h4(data-timespan="June 2015") FCUL Rally Pro 1st place
+                    p Programming competition for secondary school students - Faculdade de Ciências, Universidade de Lisboa
+        dialog#extended-cv-modal
+            a.close-modal(href="#")
+                i.fa.fa-times(alt="Close")
+            main
+                include extended-cv.pug
+        footer
+            p Diogo Almiro, #{dateStr}
+        script
+            include open-modal.js      
+        script
+            include show-mail.js                   
