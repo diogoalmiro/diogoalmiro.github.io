@@ -36,8 +36,9 @@ jobs:
       - name: Install pug
         uses: npm install -g pug-cli
       - name: Create www files
-		run: mkdir wwww
-		run: pug-cli -o www/ -b src/ src/* 
+		run: |
+          mkdir wwww
+		  pug-cli -o www/ -b src/ src/* 
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
