@@ -36,7 +36,7 @@ jobs:
       - name: Install pug
         run: npm install -g pug-cli
       - name: Create www files
-		run: |
+        run: |
           mkdir wwww
           pug-cli -o www/ -b src/ src/* 
       - name: Setup Pages
